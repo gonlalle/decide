@@ -6,7 +6,9 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
-
+    strategy:
+      matrix:
+      pyversion: ['3.5','3.8']
     services:
       postgres:
         image: postgres:10.8
@@ -45,6 +47,6 @@ jobs:
     - uses: akhileshns/heroku-deploy@v3.12.12 # This is the action
       with:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
-          heroku_app_name: "gh-actions-travis" #Must be unique in Heroku
-          heroku_email: "jagalindo@us.es"
+          heroku_app_name: "decide-gla" #Must be unique in Heroku
+          heroku_email: "gonlalalv@alum.us.es"
 
