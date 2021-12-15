@@ -42,7 +42,7 @@ jobs:
     - name: Codacy Coverage Reporter
       uses: codacy/codacy-coverage-reporter-action@v1.1.0
       with:
-          project-token: ${{ secrets.CODACY_PROJECT_TOKEN }}
+          project-token: "477081ca68c44eeead6b2615500ca407"
           coverage-reports: decide/coverage.xml  
  
   deploy:
