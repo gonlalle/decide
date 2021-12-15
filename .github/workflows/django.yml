@@ -49,10 +49,11 @@ jobs:
 
      if: ${{github.ref == 'refs/heads/deevelop' }}
      runs-on: ubuntu-latest
-     steps:   
+     steps:
+     - uses: actions/checkout@v1   
      - uses: akhileshns/heroku-deploy@v3.12.12 # This is the action
-     with:
-         heroku_api_key: ${{secrets.HEROKU_API_KEY}}
-         heroku_app_name: "decide-gla" #Must be unique in Heroku
-         heroku_email: "gonlalalv@alum.us.es"
+       with:
+           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
+           heroku_app_name: "decide-gla" #Must be unique in Heroku
+           heroku_email: "gonlalalv@alum.us.es"
 
